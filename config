@@ -1,0 +1,24 @@
+RAND_CMD="/usr/bin/openssl rand -base64 24"
+# Verify your GPG location and replace it here if different
+GNUPG="/opt/local/bin/gpg"
+
+# Replace $PATH_TO_YOUR_GPG_HOMEDIR
+GNUPG_ARGS="--homedir=$PATH_TO_YOUR_GPG_HOMEDIR --no-encrypt-to --armorg"
+
+# Number of people required out of the total members to unlock the secret
+QUORUM="5"
+MEMBERS="8"
+
+# Replace key IDs and an identifying alias
+KEYIDS="
+    7B67DC344DE21456084B2915FBAC51FCDD448914:person1
+    EE075CD1FDEEDBAEDA47CFEB9728CD2290342724:person2
+    B5FCE90F58DC5C5E68DE7265738FF7BEA9045534:person3
+    063D8C79C64378ABC9554CE88E46D4B98810D754:person4
+    BDC5718254C7B4822C82128296FA5C52C6019E44:person5
+    A837E1CF4BBD4822AB22D5A974F69552FCC06FA4:person6
+    6B53FCC570E25191A94E4D9FC728EEB2F64D0664:person7
+    77778E0AAB0F116AEC856F7A5C1A75139753AD84:person8
+"
+
+# vim:ft=sh

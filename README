@@ -1,0 +1,22 @@
+# This set of files will encrypt a secret (e.g. a root password) and split 
+# it into parts for each member. A quorum of people must decrypt their part
+# and return it to reconstruct the secret.
+
+# This assumes you have each member's GPG pubkey and have modified
+# config file with those key-IDs.
+
+# Example:
+
+$ sh quorum.sh secret-name
+5jEYqswG1iqubt5mqefmW2nmVqFGTTmV
+
+$ ls *.asc
+secret-name-person1.asc
+secret-name-person2.asc
+secret-name-person3.asc
+secret-name-person4.asc
+secret-name-person5.asc
+secret-name-person6.asc
+secret-name-person7.asc
+secret-name-person8.asc
+
