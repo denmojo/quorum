@@ -2,7 +2,7 @@ RAND_CMD="/usr/bin/openssl rand -base64 24"
 # Verify your GPG location and replace it here if different
 GNUPG="/opt/local/bin/gpg"
 
-# Replace $PATH_TO_YOUR_GPG_HOMEDIR
+# Replace $PATH_TO_YOUR_GPG_HOMEDIR (e.g. /Users/denmojo/.gnupg )
 GNUPG_ARGS="--homedir=$PATH_TO_YOUR_GPG_HOMEDIR --no-encrypt-to --armorg"
 
 # Number of people required out of the total members to unlock the secret
